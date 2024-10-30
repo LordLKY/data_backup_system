@@ -1,7 +1,9 @@
 # virtual_file_system
 虚拟文件管理系统
 
-![VFS](https://github.com/LordLKY/virtual_file_system/blob/main/asset/3.jpg)
+<div align=center>
+<img src="https://github.com/LordLKY/virtual_file_system/blob/main/asset/3.jpg">
+</div>
 
 ## About
 
@@ -36,7 +38,9 @@ python ui.py
 
 其中cmd.py是一个命令行风格的界面；ui.py为图形界面。运行ui.py出现以下界面则表示运行成功：
 
-![Main Window of VFS](https://github.com/LordLKY/virtual_file_system/blob/main/asset/2.png)
+<div align=center>
+<img src="https://github.com/LordLKY/virtual_file_system/blob/main/asset/2.png">
+</div>
 
 ## Features
 
