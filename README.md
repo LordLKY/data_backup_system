@@ -1,7 +1,7 @@
 # virtual_file_system
 虚拟文件管理系统
 
-![VFS](https://github.com/LordLKY/virtual_file_system/blob/main/asset/1.jpg)
+![VFS](https://github.com/LordLKY/virtual_file_system/blob/main/asset/3.jpg)
 
 ## About
 
