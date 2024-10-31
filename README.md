@@ -31,6 +31,7 @@ pip install -r requirements.txt
 
 ```bash
 python cmd.py
+# 或者（同一时间只能运行一个，否则会导致不一致问题！）
 python ui.py
 ```
 
