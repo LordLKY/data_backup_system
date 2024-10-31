@@ -1,13 +1,13 @@
-# virtual_file_system
-虚拟文件管理系统
+# data_backup_system
+数据备份系统
 
 <div align=center>
-<img src="https://github.com/LordLKY/virtual_file_system/blob/main/asset/3.jpg">
+<img src="https://github.com/LordLKY/data_backup_system/blob/main/asset/3.jpg">
 </div>
 
 ## About
 
-本项目是一个虚拟文件管理系统，使用Python实现，并拥有命令行界面和基于PyQt的前端界面。包括以下功能：
+本项目是一个数据备份系统，使用Python实现，并拥有命令行界面和基于PyQt的前端界面。包括以下功能：
 
 - 文件的备份与恢复
 - 文件的压缩/解压、加密/解密以及打包/解包
@@ -24,8 +24,8 @@
 ### Build
 
 ```bash
-git clone https://github.com/LordLKY/virtual_file_system.git
-cd virtual_file_system
+git clone https://github.com/LordLKY/data_backup_system.git
+cd data_backup_system
 pip install -r requirements.txt
 ```
 
@@ -39,18 +39,30 @@ python ui.py
 其中cmd.py是一个命令行风格的界面；ui.py为图形界面。运行ui.py出现以下界面则表示运行成功：
 
 <div align=center>
-<img src="https://github.com/LordLKY/virtual_file_system/blob/main/asset/2.png">
+<img src="https://github.com/LordLKY/data_backup_system/blob/main/asset/2.png">
 </div>
 
 ## Features
 
 ### File System
 
-（待补充）
+该部分代码位于[该目录](https://github.com/LordLKY/data_backup_system/tree/main/file_system), 实现了串行多用户, 去重存储的虚拟文件系统。以下是各个功能的简要介绍:
+
+#### 基础功能
+
+用户可以像操作真实文件系统一样操作虚拟文件系统, 包括创建目录, 删除文件/目录, 移动文件/目录, 查看文件/目录内容等。
+
+(ps: 这里查看文件内容的功能实现了, 但是没有在 `cmd.py` , `ui.py` 中提供对应的命令; 创建文件只支持通过导入文件的方式进行)
+
+用户可以从本地导入文件到虚拟文件系统，也可以从虚拟文件系统导出文件到本地。
+
+#### 附加功能
+
+支持目录比对功能，可以比较两个目录的文件差异 (以文件为单位的补丁形式显示)。
 
 ### File Processing
 
-该部分代码位于[该目录](https://github.com/LordLKY/virtual_file_system/tree/main/file_process)，实现了文件压缩/解压、加密/解密以及打包/解包功能。以下是各个功能的简要介绍：
+该部分代码位于[该目录](https://github.com/LordLKY/data_backup_system/tree/main/file_process)，实现了文件压缩/解压、加密/解密以及打包/解包功能。以下是各个功能的简要介绍：
 
 #### zip/unzip
 
