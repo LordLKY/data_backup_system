@@ -2,7 +2,7 @@
 数据备份系统
 
 <div align=center>
-<img src="https://github.com/LordLKY/data_backup_system/blob/main/asset/3.jpg">
+<img src="asset/3.jpg">
 </div>
 
 ## About
@@ -12,8 +12,6 @@
 - 文件的备份与恢复
 - 文件的压缩/解压、加密/解密以及打包/解包
 - 文件目录查看与比对
-
-本项目的合作者还有：（待补充），非常感谢他们的贡献。
 
 ## Usage
 
@@ -33,13 +31,14 @@ pip install -r requirements.txt
 
 ```bash
 python cmd.py
+# 或者（同一时间只能运行一个，否则会导致不一致问题！）
 python ui.py
 ```
 
 其中cmd.py是一个命令行风格的界面；ui.py为图形界面。运行ui.py出现以下界面则表示运行成功：
 
 <div align=center>
-<img src="https://github.com/LordLKY/data_backup_system/blob/main/asset/2.png">
+<img src="asset/2.png">
 </div>
 
 ## Features
@@ -80,4 +79,3 @@ python ui.py
 
 - 本项目中的文件备份/恢复以及目录比对/查看功能需要在完成根目录与用户设置后才能使用
 - 本项目中的压缩/加密/打包算法较为简单，仅支持文本文件
-- 本项目采用了延迟保存修改的方式，即用户在进行文件备份后，不会立即修改，而是等到用户关闭程序时才提交修改。这提高了程序的运行效率。
