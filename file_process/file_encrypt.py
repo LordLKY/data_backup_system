@@ -50,9 +50,16 @@ class FileEncrypter:
     # read original file
     def read_file(self, path) -> str:
         try:
-            with open(path, 'r+') as file:
+            # using 'rb' & 'wb' is more robust
+            # with open(path, 'r+') as file:
+            #     content = file.read()
+            #     file.write('')  # clear the file
+            # file.close()
+            with open(path, 'rb') as file:
                 content = file.read()
-                file.write('')  # clear the file
+            file.close()
+            with open(path, 'wb') as file:
+                file.write(b'')
             file.close()
             return content
         except:
@@ -67,7 +74,7 @@ class FileEncrypter:
         content = self.read_file(path)
 
         # enlongate the content to 64*x Bytes
-        content = content.encode('utf-8')
+        # content = content.encode('utf-8')
         content_len = len(content)
         padded_len = ((content_len + 3) // 64 + 1) * 64
         for i in range(padded_len - 4 - content_len):
@@ -129,8 +136,11 @@ class FileDecrypter:
         
         # restore original content
         content_len = int.from_bytes(decrypted_content[-4:], byteorder='big')
-        content = decrypted_content[:content_len].decode("utf-8")
+        # content = decrypted_content[:content_len].decode("utf-8")
 
-        with open(path, 'w') as file:
-            file.write(content)
+        # using 'wb' is more robust
+        # with open(path, 'w') as file:
+        #     file.write(content)
+        with open(path, 'wb') as file:
+            file.write(decrypted_content[:content_len])
         file.close()
